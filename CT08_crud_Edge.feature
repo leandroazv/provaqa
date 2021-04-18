@@ -19,24 +19,30 @@ Feature: CT08_crud_Edge
 
         Cenário: CT08_1 - Acessar plataforma
 
-            Dado que abro o navegador "Internet Explorer"
+            Dado que abro o navegador "Edge"
              Quando abro a url "http://prova.stefanini-jgr.com.br/teste/qa/"
              Então a plataforma de Cadastro é carregada no navegador
+              E verifico o título da página se está escrito: "Cadastro de usuários"
+              E verifico a descrição do objetivo da página que está localizado abaixo do título que está escrito: "Para realizar o cadastro de um usuário, insira dados válidos no formulário e acione a opção Cadastrar :)"
+              E verifico que o Background da tela está usando uma foto do escritório da stefanini como especificado na EF
+              E verifico se o placeholder no campo "Nome" está como : "João da Silva"
+              E verifico se o placeholder no campo "E-mail" está como : "joao.silva@email.com"
+              E verifico se o placeholder no campo "Senha" está como : "********"
 
-        Cenário: CT05_2 - Cadastrar usuário com Sucesso
+        Cenário: CT08_2 - Cadastrar usuário com Sucesso
 
             Dado que eu estou na funcionalidade de cadastro de usuário
              Quando preencho o campo "Nome" com "M. Leandro"
               E preencho o campo "E-mail" com "leandro.azcompany@gmail.com"
               E preencho o campo "Senha" com "12345678"
               E verifico que o dados do campo senha são do tipo "password"
-              E clico no botão "cadastrar"
+              E clico no botão "Cadastrar"
              Então verifico que o usuário está cadastrado e sendo apresentado na tabela "Usuários cadastrados"
-              E verifico que os coluna "id" está preenchida
-              E verifico que os coluna Nome está preenchido com "Leandro Azevedo da Silva"
-              E verifico que os coluna e-mail está preenchido com "leandro.azcompany@gmail.com"
+              E verifico que os coluna "Id" está preenchida
+              E verifico que os coluna "Nome" está preenchido com "Leandro Azevedo da Silva"
+              E verifico que os coluna "E-mail" está preenchido com "leandro.azcompany@gmail.com"
  
-        Cenário: CT05_3 - Excluir usuário cadastrado e fechar
+        Cenário: CT08_3 - Excluir usuário cadastrado e fechar
 
             Dado que há dados na tabela "Usuários cadastrados"
              Quando clico no botão "Excluir"
