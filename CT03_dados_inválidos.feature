@@ -68,6 +68,7 @@ Feature: CT03_dados_inválidos
               E atualizo a página
               
         Cenário: CT03_6 Cadastrar usuário com campo Nome preenchido com números
+        #Este cenário apresentou erro pois não cumpre o resultado esperado. Realiza a gravação do nome do usuário com apenas dados numéricos
 
             Dado que eu estou na funcionalidade de cadastro de usuário
              Quando  preencho o campo "Nome" com "1 1 1"
@@ -138,3 +139,15 @@ Feature: CT03_dados_inválidos
               E fecho o navegador
    
 
+        Cenário: CT03_13 - Cadastrar usuário com Nome árabe
+
+            Dado que eu estou na funcionalidade de cadastro de usuário
+             Quando preencho o campo "Nome" com "انا ماريا سوزا"
+              E preencho o campo "E-mail" com "ana@gmai.com.br"
+              E preencho o campo "Senha" com "12345678"
+              E verifico que o dados do campo senha são do tipo "password"
+              E clico no botão "Cadastrar"
+             Então verifico que o usuário está cadastrado e sendo apresentado na tabela "Usuários cadastrados"
+              E verifico que os coluna "Id" está preenchida
+              E verifico que os coluna "Nome" está preenchido com "انا ماريا سوزا"
+              E verifico que os coluna "E-mail" está preenchido com "ana@gmai.com.br"

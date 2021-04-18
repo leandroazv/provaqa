@@ -22,6 +22,12 @@ Feature: CT06_crud_Mozila
             Dado que abro o navegador "Mozila Firefox"
              Quando abro a url "http://prova.stefanini-jgr.com.br/teste/qa/"
              Então a plataforma de Cadastro é carregada no navegador
+              E verifico o título da página se está escrito: "Cadastro de usuários"
+              E verifico a descrição do objetivo da página que está localizado abaixo do título que está escrito: "Para realizar o cadastro de um usuário, insira dados válidos no formulário e acione a opção Cadastrar :)"
+              E verifico que o Background da tela está usando uma foto do escritório da stefanini como especificado na EF
+              E verifico se o placeholder no campo "Nome" está como : "João da Silva"
+              E verifico se o placeholder no campo "E-mail" está como : "joao.silva@email.com"
+              E verifico se o placeholder no campo "Senha" está como : "********"
 
         Cenário: CT06_2 - Cadastrar usuário com Sucesso
 

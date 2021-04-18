@@ -110,11 +110,11 @@ Feature: CT04_ordenação_id
               E preencho o campo "E-mail" com "jurema@gmail.com"
               E preencho o campo "Senha" com "soujurema123"
               E verifico que o dados do campo senha são do tipo "password"
-              E clico no botão "cadastrar"
+              E clico no botão "Cadastrar"
              Então verifico que o usuário está cadastrado e sendo apresentado na tabela "Usuários cadastrados"
-              E verifico que os coluna "id" está preenchida com "11" como o último ítem da listagem da tabela
-              E verifico que os coluna Nome está preenchido com "Jurema Silva"
-              E verifico que os coluna e-mail está preenchido com "jurema@gmail.com"
+              E verifico que os coluna "Id" está preenchida com "11" como o último ítem da listagem da tabela
+              E verifico que os coluna "Nome" está preenchido com "Jurema Silva"
+              E verifico que os coluna "E-mail" está preenchido com "jurema@gmail.com"
  
              
 
